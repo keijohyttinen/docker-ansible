@@ -5,12 +5,10 @@
 # Version  1.0
 #
 
-
-# pull base image
-FROM debian:jessie
+# pull base image - archive version, see https://github.com/docker-library/official-images/pull/5609
+FROM debian:jessie-20190326
 
 MAINTAINER William Yeh <william.pjyeh@gmail.com>
-
 
 RUN echo "===> Installing python, sudo, and supporting tools..."  && \
     apt-get update -y  &&  apt-get install --fix-missing          && \
